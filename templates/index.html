@@ -1,0 +1,22 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>House Price Prediction</title>
+</head>
+<body>
+<h1> Predict House Price</h1>
+<form action="/" method="POST">
+    <label for="exp">House Features</label>
+    <input type="number" name="num_bedrooms" placeholder="# Bedrooms">
+    <input type="number" name="num_bathrooms" placeholder="# Bathrooms">
+    <input type="number" name="Sq_ft" placeholder="Sq_ft">
+    <input type="number" name="year_built" placeholder="Year built">
+    <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+</form>
+    {% if pred %}
+        <p>Predicted House Price is: </p> {{pred}}
+    {% endif %}
+</body>
+</html>
